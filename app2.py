@@ -14,10 +14,22 @@ def submit():
     print("Username:", repr(username))
     print("Password:",repr(password))
 
-    if username == "shree123" and password == "pass":
+    # if username == "shree123" and password == "pass":
+    #     return render_template("welcome.html", name=username)
+    # else:
+    #     return "Invalid username or password"
+
+    valid_users = {
+        'admin':'123',
+        'shree123':'pass',
+        'jha':'456'
+    }
+
+    if username in valid_users and password == valid_users[username]:
         return render_template("welcome.html", name=username)
+    
     else:
-        return "Invalid username or password"
+        return "Invalid credentials"
     
 if __name__ == "__main__":
     app.run(debug=True)

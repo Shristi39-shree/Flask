@@ -7,3 +7,23 @@ layout
 --------------------------------
 JINJA 2
  
+ 1-python values
+{{variable}}
+
+{{name}}
+<p>Wlcome {{name}}</p>
+
+2-conditionals
+is_topper = True
+
+{% if is_topper%}
+<p>You are a topper</P>
+
+{% else %}
+<p>You need to work hard</p>
+{% endif %}
+
+
+
+
+
